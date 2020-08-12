@@ -1,0 +1,16 @@
+---
+users:
+  - name: ecloudsys
+    password: POSTGRES_USER1PASS
+    role: createdb, createrole
+    
+databases:
+  - name: sonar
+    owner: sonaruser
+    tablespace:
+      - name: tb2
+        location: /appz/data/tb2
+    schemas:
+      - name: sonarschema
+        authorised_user: sonaruser
+        search_path: true
