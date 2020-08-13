@@ -35,5 +35,7 @@ properties:
     POSTGRESQL_NUM_SYNCHRONOUS_REPLICAS: 1
     PGUSER: replica
     PGPASSWORD: 
-      vault: PGPASSWORD   
+      vault: PGPASSWORD
+    POSTGRES_USER1PASS:
+      vault: POSTGRES_USER1PASS
     revision : 25
