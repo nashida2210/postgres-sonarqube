@@ -9,7 +9,7 @@ build:
     build_file: none
     output_files: output/*.zip
     image_template: postgres_master-12.2
-    image_name: alpha/postgres_master
+    image_name: alpha/postgres_sonar
     
 deploy:
     context: alpha/DEV
@@ -18,7 +18,7 @@ deploy:
     - 5432
     
 volumes:
-  - claim: postgres-master-data
+  - claim: postgres-sonar-data
     mount: /appz/data
     name: data
     
@@ -36,6 +36,6 @@ properties:
     PGUSER: replica
     PGPASSWORD: 
       vault: PGPASSWORD
-    POSTGRES_USER1PASS:
-      vault: POSTGRES_USER1PASS
+    SONARUSER_PASSWORD:
+      vault: SONARUSER_PASSWORD
     revision : 25
