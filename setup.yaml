@@ -1,7 +1,7 @@
 ---
 users:
-  - name: ecloudsys
-    password: POSTGRES_USER1PASS
+  - name: sonaruser
+    password: SONARUSER_PASSWORD
     role: createdb, createrole
     
 databases:
