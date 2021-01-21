@@ -1,16 +1,16 @@
 ---
 users:
-  - name: sonaruser
+  - name: sonaradmin
     password: SONARUSER_PASSWORD
     role: createdb, createrole
     
 databases:
   - name: sonar
-    owner: sonaruser
+    owner: sonaradmin
     tablespace:
       - name: tb2
         location: /appz/data/tb2
     schemas:
-      - name: sonarschema
+      - name: sonarqubeschema
         authorised_user: sonaruser
         search_path: true
