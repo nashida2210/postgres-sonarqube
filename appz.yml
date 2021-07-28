@@ -8,8 +8,7 @@ build:
     env: DEV
     build_file: none
     output_files: output/*.zip
-    image_template: postgres_master-12.2
-    image_name: alpha/postgres_sonar
+    image_template: postgres_master-13.3
     
 deploy:
     context: alpha/DEV
@@ -23,11 +22,7 @@ volumes:
     mount: /appz/data
     name: data
     size: 5Gi
-    mode: ReadWriteOnce
-    class: microk8s-hostpath    
-
-monitor:
-    notify: appzops@cloudbourne.co      
+    mode: ReadWriteOnce     
     
 properties:
     POSTGRESQL_REPLICATION_MODE: master
