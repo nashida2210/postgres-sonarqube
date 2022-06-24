@@ -41,4 +41,4 @@ properties:
       vault: POSTGRES_SONARUSER_PASSWORD
     APPZ_RESTORE_TOKEN: 20220624-0615
     APPZ_LOAD_TOKEN: 20220624-0615
-    revision : 57
+    revision : 58
