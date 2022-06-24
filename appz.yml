@@ -1,7 +1,7 @@
 app:
     name: Postgres Sonarqube
     code: POSTGRESSONARQUBE
-    notify: appzdev@cloudbourne.co
+    notify: nmeeran@ecloudcontrol.com
     
 build:
     version: 13.3
@@ -11,7 +11,7 @@ build:
     image_template: postgres_master-13.3
     
 deploy:
-    context: alpha/DEV
+    context: nashida2210/DEV
     type: statefulset
     replicas: 1
     port:
@@ -39,6 +39,6 @@ properties:
       vault: PGPASSWORD
     SONARUSER_PASSWORD:
       vault: SONARUSER_PASSWORD
-    APPZ_RESTORE_TOKEN: 20210115-1015
-    APPZ_LOAD_TOKEN: 20210115-1015
+    APPZ_RESTORE_TOKEN: 20220624-0615
+    APPZ_LOAD_TOKEN: 20220624-0615
     revision : 56
