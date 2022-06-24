@@ -1,16 +1,15 @@
----
 users:
-  - name: sonaradmin
-    password: SONARUSER_PASSWORD
-    role: createdb, createrole
+  - name: postgresonar
+    password: $POSTGRES_SONARUSER_PASSWORD
+    role: superuser
     
 databases:
-  - name: sonar
-    owner: sonaradmin
+  - name: postgresonar
+    owner: postgresonar
     tablespace:
       - name: tb2
         location: /appz/data/tb2
     schemas:
       - name: sonarqubeschema
-        authorised_user: sonaruser
+        authorised_user: postgresonar
         search_path: true
